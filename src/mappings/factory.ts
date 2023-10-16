@@ -10,9 +10,9 @@ import { getTokenDefinitions } from './tokenDefinition'
 
 export function handlePoolCreated(event: PoolCreated): void {
   // // temp fix
-  // if (event.params.pool != Address.fromHexString('0xd0617bafa397fd5965ade3cf829c56452a7de28e') && event.params.pool != Address.fromHexString('0x9cd26e42e11617916273d9852272ec6c4162fc31')) {
-  //   return
-  // }
+  if (event.params.pool != Address.fromHexString('0xd0617bafa397fd5965ade3cf829c56452a7de28e') && event.params.pool != Address.fromHexString('0x9cd26e42e11617916273d9852272ec6c4162fc31')) {
+    return
+  }
   // create new bundle for tracking eth price
   let bundle = new Bundle('1')
   bundle.ethPriceUSD = ZERO_BD

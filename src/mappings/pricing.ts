@@ -22,11 +22,11 @@ let STABLE_COINS: string[] = [
 
 let MINIMUM_ETH_LOCKED = BigDecimal.fromString('60')
 
-let Q192 = 2 ** 192
+const Q192 = BigInt.fromI32(2).pow(192)
 export function sqrtPriceX96ToTokenPrices(sqrtPriceX96: BigInt, token0: Token, token1: Token): BigDecimal[] {
   let num = sqrtPriceX96.times(sqrtPriceX96).toBigDecimal()
-  let denom = BigDecimal.fromString(Q192.toString())
-  let price1 = num
+  let denom = Q192.toBigDecimal()
+  let price1 = exponentToBigDecimal(token1.decimals) == ZERO_BD ? ONE_BD : num
     .div(denom)
     .times(exponentToBigDecimal(token0.decimals))
     .div(exponentToBigDecimal(token1.decimals))
