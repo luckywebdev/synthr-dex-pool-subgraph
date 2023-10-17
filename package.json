@@ -6,10 +6,10 @@
   "scripts": {
     "codegen": "graph codegen --output-dir src/types/",
     "build": "graph build",
-    "create-local": "graph create luckywebdev/synthr-dex-pool-goerli --node http://127.0.0.1:8020",
-    "deploy-local": "graph deploy luckywebdev/synthr-dex-pool-goerli --debug --ipfs http://localhost:5001 --node http://127.0.0.1:8020",
+    "create-local": "graph create luckywebdev/synthr-dex-pool-mumbai --node http://127.0.0.1:8020",
+    "deploy-local": "graph deploy luckywebdev/synthr-dex-pool-mumbai --debug --ipfs http://localhost:5001 --node http://127.0.0.1:8020",
     "auth": "graph auth --debug hosted-service https://api.thegraph.com/deploy/ 798b2dde29dd4aa0b461f22ba2af3f41",
-    "deploy": "graph deploy luckywebdev/synthr-dex-pool-goerli --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/",
+    "deploy": "graph deploy luckywebdev/synthr-dex-pool-mumbai --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/",
     "deploy-staging": "graph deploy $THE_GRAPH_GITHUB_USER/$THE_GRAPH_SUBGRAPH_NAME /Synthr --ipfs https://api.staging.thegraph.com/ipfs/ --node https://api.staging.thegraph.com/deploy/",
     "watch-local": "graph deploy graphprotocol/Synthr --watch --debug --node http://127.0.0.1:8020/ --ipfs http://localhost:5001"
   },

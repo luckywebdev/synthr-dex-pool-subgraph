@@ -2,6 +2,17 @@ import { BigInt, BigDecimal, ethereum, Address } from '@graphprotocol/graph-ts'
 import { TokenDefinition, Transaction } from '../types/schema'
 export const ADDRESS_ZERO = '0x0000000000000000000000000000000000000000'
 export const FACTORY_ADDRESS = '0x1F98431c8aD98523631AE4a59f267346ea31F984'
+// // goerli
+// export const SyETH_ETH_POOL = '0xd0617bafa397fd5965ade3cf829c56452a7de28e'
+// export const USDC_ETH_POOL = '0x9cd26e42e11617916273d9852272ec6c4162fc31'
+// mumbai
+export const SyETH_ETH_POOL = '0x3cee42826ad7b59b5cc43a7cd9599e17019b93f2' 
+export const USDC_ETH_POOL = '0x16de1c906c623fff4a270d78e8a69eada21a8deb'
+
+// // goerli
+// const WETH_ADDRESS = '0xb4fbf271143f4fbf7b91a5ded31805e42b2208d6'
+// mumbai
+export const WETH_ADDRESS = '0x9c3c9283d3e44854697cd22d3faa240cfb032889'
 
 export const ZERO_BI = BigInt.fromI32(0)
 export const ONE_BI = BigInt.fromI32(1)
@@ -9,6 +20,16 @@ export const ZERO_BD = BigDecimal.fromString('0')
 export const ONE_BD = BigDecimal.fromString('1')
 export const BI_18 = BigInt.fromI32(18)
 export const BI_6 = BigInt.fromI32(6)
+// // goerli
+// export const DEFAULT_ETH_PRICE = BigDecimal.fromString('1562.1')
+// export const UPPER_LIMIT_ETH_PRICE = BigDecimal.fromString('1610')
+// export const LOWER_LIMIT_ETH_PRICE = BigDecimal.fromString('1510')
+
+// mumbai
+export const DEFAULT_ETH_PRICE = BigDecimal.fromString('0.52')
+export const UPPER_LIMIT_ETH_PRICE = BigDecimal.fromString('0.6')
+export const LOWER_LIMIT_ETH_PRICE = BigDecimal.fromString('0.5')
+
 export const SECONDS_IN_ONE_DAY = 86400
 
 export function exponentToBigDecimal(decimals: BigInt): BigDecimal {

@@ -1,4 +1,4 @@
-import { ethereum } from '@graphprotocol/graph-ts'
+import { ethereum, log } from '@graphprotocol/graph-ts'
 import { ZERO_BD, ZERO_BI, ONE_BI, ONE_BD } from './helpers'
 /* eslint-disable prefer-const */
 import {
@@ -16,10 +16,13 @@ export function updatePoolDayData(event: ethereum.Event): PoolDayData | null {
     .toHexString()
     .concat('-')
     .concat(dayID.toString())
+  log.info('dayPoolID check ====>>> {}', [dayPoolID])
   let pool = Pool.load(event.address.toHexString())
   if (pool === null) {
     return null
   }
+  log.info('pool id check ====>>> {}', [pool.id])
+  log.debug('pool id debug check ====>>> {}', [pool.id])
   let poolDayData = PoolDayData.load(dayPoolID)
   if (poolDayData === null) {
     poolDayData = new PoolDayData(dayPoolID)
@@ -27,6 +30,7 @@ export function updatePoolDayData(event: ethereum.Event): PoolDayData | null {
     poolDayData.volumeToken0 = ZERO_BD
     poolDayData.volumeToken1 = ZERO_BD
     poolDayData.volumeUSD = ZERO_BD
+    poolDayData.txCount = ZERO_BI
     // things that dont get initialized always
     poolDayData.pool = pool.id
     poolDayData.open = pool.token0Price

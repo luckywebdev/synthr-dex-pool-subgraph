@@ -1,7 +1,7 @@
 import { ethereum } from '@graphprotocol/graph-ts';
 import { WHITELIST_TOKENS } from './pricing'
 /* eslint-disable prefer-const */
-import { ZERO_BD, ZERO_BI, fetchTokenSymbol, fetchTokenName, fetchTokenDecimals } from './helpers'
+import { ZERO_BD, ZERO_BI, fetchTokenSymbol, fetchTokenName, fetchTokenDecimals, SyETH_ETH_POOL, USDC_ETH_POOL } from './helpers'
 import { Pool, Token, Bundle, TokenDefinition } from '../types/schema'
 import { Pool as PoolTemplate } from '../types/templates'
 import { PoolCreated } from '../types/Factory/Factory'
@@ -10,7 +10,7 @@ import { getTokenDefinitions } from './tokenDefinition'
 
 export function handlePoolCreated(event: PoolCreated): void {
   // // temp fix
-  if (event.params.pool != Address.fromHexString('0xd0617bafa397fd5965ade3cf829c56452a7de28e') && event.params.pool != Address.fromHexString('0x9cd26e42e11617916273d9852272ec6c4162fc31')) {
+  if (event.params.pool != Address.fromHexString(SyETH_ETH_POOL) && event.params.pool != Address.fromHexString(USDC_ETH_POOL)) {
     return
   }
   // create new bundle for tracking eth price
