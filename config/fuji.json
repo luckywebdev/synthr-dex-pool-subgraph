@@ -1,0 +1,7 @@
+{
+  "network": "fuji",
+  "startBlockV21": 25627986,
+  "factoryV21": "0x8e42f2F4101563bF679975178e880FD87d3eFd4e",
+  "mainPair": "0x9ccc3609ad89379ebd36d5bb4e3809e9bb9e6bd2",
+  "priceOracle": "0x5498bb86bc934c8d34fda08e81d444153d0d06ad"
+}

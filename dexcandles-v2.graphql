@@ -1,0 +1,49 @@
+type Bundle @entity {
+  id: ID!
+  # price of ETH in usd
+  ethPriceUSD: BigDecimal!
+}
+
+type Token @entity {
+  id: ID! # token address
+  # mirrored from smart contract
+  symbol: String!
+  name: String!
+  decimals: BigInt!
+}
+
+type LBPairV21 @entity {
+  id: ID!
+
+  # mirrored from smart contract
+  tokenX: Token!
+  tokenY: Token!
+  binStep: BigInt!
+}
+
+type Candle @entity {
+  id: ID! # period start timestamp + tokenX + tokenY
+  time: Int!
+  period: Int!
+  lastBlock: Int!
+
+  token0: Bytes!
+  token1: Bytes!
+
+  token0TotalAmount: BigInt!
+  token1TotalAmount: BigInt!
+
+  volumeUSD: BigDecimal!
+
+  high: BigDecimal!
+  open: BigDecimal!
+  close: BigDecimal!
+  low: BigDecimal!
+}
+
+type NFTId @entity {
+  id: ID!
+  time: Int!
+  account: String!
+  ids: [BigInt!]!
+}

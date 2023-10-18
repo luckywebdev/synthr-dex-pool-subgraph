@@ -1,0 +1,7 @@
+{
+    "network": "chapel",
+    "startBlockV21": 33137659,
+    "factoryV21": "0x8e42f2F4101563bF679975178e880FD87d3eFd4e",
+    "mainPair": "0xb9ece43dde280b109b7b731a09fd35247998eb28",
+    "priceOracle": "0x2514895c72f50d8bd4b4f9b1110f0d6bd2c97526"
+}
