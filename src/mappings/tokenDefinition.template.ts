@@ -15,19 +15,19 @@ export class StaticTokenDefinition {
 export function getTokenDefinitions(): Array<StaticTokenDefinition> {
   let staticDefinitions: Array<StaticTokenDefinition> = [
     {
-      address: Address.fromString('0x1a56c52ae106c229dfaa9d225acbd7953843de0c'),
-      symbol: 'SyMATIC',
-      name: 'Synthr syMATIC',
+      address: Address.fromString('{{ syNative }}'),
+      symbol: '{{ syNativeSymbol }}',
+      name: '{{ syNativeName }}',
       decimals: BigInt.fromI32(18)
     }, {
-      address: Address.fromString('0x5e5bbd784c1cfee0f851a7baec3f068297aad1fb'),
+      address: Address.fromString('{{ usdc }}'),
       symbol: 'USDC',
       name: 'Mock USDC',
       decimals: BigInt.fromI32(18)
     }, {
-      address: Address.fromString('0x9c3c9283d3e44854697cd22d3faa240cfb032889'),
-      symbol: 'WMATIC',
-      name: 'Wrapped MATIC',
+      address: Address.fromString('{{ wrappedNative }}'),
+      symbol: '{{ wrappedNativeSymbol }}',
+      name: '{{ wrappedNativeName }}',
       decimals: BigInt.fromI32(18)
     }
   ]

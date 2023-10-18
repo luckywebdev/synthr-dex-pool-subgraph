@@ -1,11 +1,11 @@
 import { BigInt, BigDecimal, ethereum, Address } from '@graphprotocol/graph-ts'
 import { TokenDefinition, Transaction } from '../types/schema'
 export const ADDRESS_ZERO = '0x0000000000000000000000000000000000000000'
-export const FACTORY_ADDRESS = '0x1F98431c8aD98523631AE4a59f267346ea31F984'
-export const SyETH_ETH_POOL = '0x3cee42826ad7b59b5cc43a7cd9599e17019b93f2' 
-export const USDC_ETH_POOL = '0x16de1c906c623fff4a270d78e8a69eada21a8deb'
+export const FACTORY_ADDRESS = '{{ factory }}'
+export const SyETH_ETH_POOL = '{{ syETHETHPool }}' 
+export const USDC_ETH_POOL = '{{ usdcETHPool }}'
 
-export const WETH_ADDRESS = '0x9c3c9283d3e44854697cd22d3faa240cfb032889'
+export const WETH_ADDRESS = '{{ wrappedNative }}'
 
 export const ZERO_BI = BigInt.fromI32(0)
 export const ONE_BI = BigInt.fromI32(1)
@@ -13,20 +13,20 @@ export const ZERO_BD = BigDecimal.fromString('0')
 export const ONE_BD = BigDecimal.fromString('1')
 export const BI_18 = BigInt.fromI32(18)
 export const BI_6 = BigInt.fromI32(6)
-export const DEFAULT_ETH_PRICE = BigDecimal.fromString('0.52')
-export const UPPER_LIMIT_ETH_PRICE = BigDecimal.fromString('0.6')
-export const LOWER_LIMIT_ETH_PRICE = BigDecimal.fromString('0.5')
+export const DEFAULT_ETH_PRICE = BigDecimal.fromString('{{ defaultETHPrice }}')
+export const UPPER_LIMIT_ETH_PRICE = BigDecimal.fromString('{{ upperPrice }}')
+export const LOWER_LIMIT_ETH_PRICE = BigDecimal.fromString('{{ lowerPrice }}')
 
 export const SECONDS_IN_ONE_DAY = 86400
 
 export const WHITELIST_TOKENS: string[] = [
-  '0x9c3c9283d3e44854697cd22d3faa240cfb032889', // WETH
-  '0x5e5bbd784c1cfee0f851a7baec3f068297aad1fb', // USDC
-  '0x1a56c52ae106c229dfaa9d225acbd7953843de0c', // SyETH
+  '{{ wrappedNative }}', // WETH
+  '{{ usdc }}', // USDC
+  '{{ syNative }}', // SyETH
 ]
 
 export const STABLE_COINS: string[] = [
-  '0x5e5bbd784c1cfee0f851a7baec3f068297aad1fb',
+  '{{ usdc }}',
 ]
 
 export function exponentToBigDecimal(decimals: BigInt): BigDecimal {

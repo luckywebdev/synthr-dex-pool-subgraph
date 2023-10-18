@@ -1,0 +1,17 @@
+{
+    "network": "goerli",
+    "factory": "0x1F98431c8aD98523631AE4a59f267346ea31F984",
+    "startBlock": 9654062,
+    "syETHETHPool": "0xd0617bafa397fd5965ade3cf829c56452a7de28e",
+    "usdcETHPool": "0x9cd26e42e11617916273d9852272ec6c4162fc31",
+    "wrappedNative": "0xb4fbf271143f4fbf7b91a5ded31805e42b2208d6",
+    "wrappedNativeName": "Wrapped ETH",
+    "wrappedNativeSymbol": "WETH",
+    "syNative": "0x3726288ee47b11e0c72daf59af38b3e73cd3b44b",
+    "syNativeName": "Synthr syETH",
+    "syNativeSymbol": "SyETH",
+    "usdc": "0x101ed9ca766c5ba0dacc5637dd29457cb948f0ec",
+    "defaultETHPrice": "1562.1",
+    "upperPrice": "1610",
+    "lowerPrice": "1510"
+}

@@ -1,31 +1,7 @@
 /* eslint-disable prefer-const */
-import { DEFAULT_ETH_PRICE, LOWER_LIMIT_ETH_PRICE, ONE_BD, UPPER_LIMIT_ETH_PRICE, USDC_ETH_POOL, WETH_ADDRESS, ZERO_BD, ZERO_BI, exponentToBigDecimal, safeDiv } from './helpers'
+import { DEFAULT_ETH_PRICE, LOWER_LIMIT_ETH_PRICE, ONE_BD, UPPER_LIMIT_ETH_PRICE, USDC_ETH_POOL, WETH_ADDRESS, STABLE_COINS, WHITELIST_TOKENS, ZERO_BD, ZERO_BI, exponentToBigDecimal, safeDiv } from './helpers'
 import { Bundle, Pool, Token } from './../types/schema'
 import { BigDecimal, BigInt } from '@graphprotocol/graph-ts'
-
-// // goerli
-// export let WHITELIST_TOKENS: string[] = [
-//   WETH_ADDRESS, // WETH
-//   '0x101ed9ca766c5ba0dacc5637dd29457cb948f0ec', // USDC
-//   // '0x67AcEeBEC61f780F9E25D234c1966D6eb1CCe744', // USDT
-//   '0x3726288ee47b11e0c72daf59af38b3e73cd3b44b', // SyETH
-// ]
-
-// let STABLE_COINS: string[] = [
-//   '0x101ed9ca766c5ba0dacc5637dd29457cb948f0ec',
-//   // '0x67AcEeBEC61f780F9E25D234c1966D6eb1CCe744',
-// ]
-
-// mumbai
-export let WHITELIST_TOKENS: string[] = [
-  WETH_ADDRESS, // WETH
-  '0x5e5bbd784c1cfee0f851a7baec3f068297aad1fb', // USDC
-  '0x1a56c52ae106c229dfaa9d225acbd7953843de0c', // SyETH
-]
-
-let STABLE_COINS: string[] = [
-  '0x5e5bbd784c1cfee0f851a7baec3f068297aad1fb',
-]
 
 let MINIMUM_ETH_LOCKED = BigDecimal.fromString('0.1')
 

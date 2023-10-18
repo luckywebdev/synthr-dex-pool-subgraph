@@ -1,5 +1,5 @@
 import { ethereum } from '@graphprotocol/graph-ts';
-import { WHITELIST_TOKENS } from './pricing'
+import { WHITELIST_TOKENS } from './helpers'
 /* eslint-disable prefer-const */
 import { ZERO_BD, ZERO_BI, fetchTokenSymbol, fetchTokenName, fetchTokenDecimals, SyETH_ETH_POOL, USDC_ETH_POOL } from './helpers'
 import { Pool, Token, Bundle, TokenDefinition } from '../types/schema'

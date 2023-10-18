@@ -4,6 +4,14 @@
   "repository": "https://github.com/Synthrio/sysnthr-synthetix-subgraph",
   "license": "GPL-3.0-or-later",
   "scripts": {
+    "prepare:goerli": "mustache config/goerli.json subgraph.template.yaml > subgraph.goerli.yaml && mustache config/goerli.json src/mappings/helpers.template.ts > src/mappings/helpers.ts && mustache config/goerli.json src/mappings/tokenDefinition.template.ts > src/mappings/tokenDefinition.ts",
+    "prepare:mumbai": "mustache config/mumbai.json subgraph.template.yaml > subgraph.mumbai.yaml && mustache config/mumbai.json src/mappings/helpers.template.ts > src/mappings/helpers.ts && mustache config/mumbai.json src/mappings/tokenDefinition.template.ts > src/mappings/tokenDefinition.ts",
+    "codegen:goerli": "graph codegen subgraph.goerli.yaml --output-dir src/types/",
+    "codegen:mumbai": "graph codegen subgraph.mumbai.yaml --output-dir src/types/",
+    "build:goerli": "graph build subgraph.goerli.yaml",
+    "build:mumbai": "graph build subgraph.mumbai.yaml",
+    "deploy:goerli": "graph deploy --node https://api.thegraph.com/deploy/ luckywebdev/synthr-dex-pool-goerli subgraph.goerli.yaml",
+    "deploy:mumbai": "graph deploy --node https://api.thegraph.com/deploy/ luckywebdev/synthr-dex-pool-mumbai subgraph.mumbai.yaml",
     "codegen": "graph codegen --output-dir src/types/",
     "build": "graph build",
     "create-local": "graph create luckywebdev/synthr-dex-pool-mumbai --node http://127.0.0.1:8020",
@@ -20,6 +28,7 @@
     "@typescript-eslint/parser": "^5.10.0",
     "eslint": "^8.7.0",
     "eslint-config-prettier": "^8.3.0",
+    "mustache": "^4.2.0",
     "prettier": "^2.5.1",
     "typescript": "^4.5.5"
   }
