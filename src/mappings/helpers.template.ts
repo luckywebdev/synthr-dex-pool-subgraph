@@ -1,5 +1,7 @@
 import { BigInt, BigDecimal, ethereum, Address } from '@graphprotocol/graph-ts'
 import { TokenDefinition, Transaction } from '../types/schema'
+import { Factory as FactoryContract } from '../types/templates/Pool/Factory'
+
 export const ADDRESS_ZERO = '0x0000000000000000000000000000000000000000'
 export const FACTORY_ADDRESS = '{{ factory }}'
 export const SyETH_ETH_POOL = '{{ syETHETHPool }}' 
@@ -94,3 +96,5 @@ export function loadTransaction(event: ethereum.Event): Transaction {
   transaction.save()
   return transaction as Transaction
 }
+
+export let factoryContract = FactoryContract.bind(Address.fromString(FACTORY_ADDRESS))

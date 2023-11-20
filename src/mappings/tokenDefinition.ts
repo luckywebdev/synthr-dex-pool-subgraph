@@ -15,7 +15,7 @@ export class StaticTokenDefinition {
 export function getTokenDefinitions(): Array<StaticTokenDefinition> {
   let staticDefinitions: Array<StaticTokenDefinition> = [
     {
-      address: Address.fromString('0x1a56c52ae106c229dfaa9d225acbd7953843de0c'),
+      address: Address.fromString('0x84dF5c37859E8FD0754E2D44C9eb2c5F418f7796'),
       symbol: 'SyMATIC',
       name: 'Synthr syMATIC',
       decimals: BigInt.fromI32(18)

@@ -1,17 +1,18 @@
 {
     "network": "mumbai",
     "factory": "0x1F98431c8aD98523631AE4a59f267346ea31F984",
-    "startBlock": 39863258,
-    "syETHETHPool": "0x3cee42826ad7b59b5cc43a7cd9599e17019b93f2",
+    "startBlock": 41583796,
+    "syETHETHPool": "0xd4cee43b831dd3ad586609eb887a37cc7d61fad5",
+    "NFTPoolManager": "0xC36442b4a4522E871399CD717aBDD847Ab11FE88",
     "usdcETHPool": "0x16de1c906c623fff4a270d78e8a69eada21a8deb",
     "wrappedNative": "0x9c3c9283d3e44854697cd22d3faa240cfb032889",
     "wrappedNativeName": "Wrapped MATIC",
     "wrappedNativeSymbol": "WMATIC",
-    "syNative": "0x1a56c52ae106c229dfaa9d225acbd7953843de0c",
+    "syNative": "0x84dF5c37859E8FD0754E2D44C9eb2c5F418f7796",
     "syNativeName": "Synthr syMATIC",
     "syNativeSymbol": "SyMATIC",
     "usdc": "0x5e5bbd784c1cfee0f851a7baec3f068297aad1fb",
-    "defaultETHPrice": "0.52",
-    "upperPrice": "0.6",
+    "defaultETHPrice": "0.8584",
+    "upperPrice": "1",
     "lowerPrice": "0.5"
 }
