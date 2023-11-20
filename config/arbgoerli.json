@@ -1,7 +1,7 @@
 {
     "network": "arbitrum-goerli",
-    "startBlockV21": 39915064,
+    "startBlockV21": 50411929,
     "factoryV21": "0x8e42f2F4101563bF679975178e880FD87d3eFd4e",
-    "mainPair": "0xb540ccbc6dba68f869b04cdc3dfadf7fc156c849",
+    "mainPair": "0x164f0f33bbfd6262e182bc0d5c4234033a373ca4",
     "priceOracle": "0x62cae0fa2da220f43a51f86db2edb36dca9a5a08"
 }
